@@ -1,0 +1,266 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{54F79815-BD67-4C16-A869-44386B5C6335}</ProjectGuid>
+    <RootNamespace>OpenGLFun</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)Intermediate\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)Source\;$(SolutionDir)Dependencies\GLFW\include\;$(SolutionDir)Dependencies\GLEW\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)Intermediate\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)Source\;$(SolutionDir)Dependencies\GLFW\include\;$(SolutionDir)Dependencies\GLEW\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)Intermediate\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)Source\;$(SolutionDir)Dependencies\GLFW\include\;$(SolutionDir)Dependencies\GLEW\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(OutDir)Intermediate\</IntDir>
+    <IncludePath>$(ProjectDir);$(ProjectDir)Source\;$(SolutionDir)Dependencies\GLFW\include\;$(SolutionDir)Dependencies\GLEW\include\;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link />
+    <Link>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\;$(SolutionDir)Dependencies\GLEW\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link />
+    <Link>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\;$(SolutionDir)Dependencies\GLEW\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\;$(SolutionDir)Dependencies\GLEW\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions);GLEW_STATIC</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>glew32s.lib;glfw3.lib;opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)Dependencies\GLFW\;$(SolutionDir)Dependencies\GLEW\</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Common.cpp" />
+    <ClCompile Include="Source\Main.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\ClearColorTest.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\CompleteMessTest.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\Curve3DTest.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\DisksTest.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\TessellationTest.cpp" />
+    <ClCompile Include="Source\Tests\BasicTests\TexturesTest.cpp" />
+    <ClCompile Include="Source\Tests\GraphsTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\CubicCurveTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\CubicSplinesTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\HighOrderBezierTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\HighOrderSplinesTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\PolynomialInterpolationTest.cpp" />
+    <ClCompile Include="Source\Tests\PolynomialTests\ShaderCubicCurveTest.cpp" />
+    <ClCompile Include="Source\Tests\TestSelector.cpp" />
+    <ClCompile Include="Source\Tests\Utilities\ControlPointsEditor.cpp" />
+    <ClCompile Include="Source\Tools\Graphics\Buffer.cpp" />
+    <ClCompile Include="Source\Tools\Graphics\Shader.cpp" />
+    <ClCompile Include="Source\Tools\Graphics\Texture.cpp" />
+    <ClCompile Include="Source\Tools\Graphics\VertexArray.cpp" />
+    <ClCompile Include="Source\Tools\GuiUtil.cpp" />
+    <ClCompile Include="Source\Tools\Input.cpp" />
+    <ClCompile Include="Source\Tools\Math\ConstantsSource.cpp" />
+    <ClCompile Include="Source\Tools\Renderer.cpp" />
+    <ClCompile Include="Source\Tools\SpecificRenderers\GraphsRenderer.cpp" />
+    <ClCompile Include="Source\Tools\SpecificRenderers\PointsBuffer.cpp" />
+    <ClCompile Include="Source\Tools\Window.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui_demo.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui_draw.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui_impl_glfw.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui_impl_opengl3.cpp" />
+    <ClCompile Include="Vendor\ImGUI\imgui_widgets.cpp" />
+    <ClCompile Include="Vendor\STBImage\stb_image.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shaders\Basic.shader" />
+    <None Include="Resources\Shaders\Basic2DColored.shader" />
+    <None Include="Resources\Shaders\CubicCurveShaders\CPUDividedCubicCurve.shader" />
+    <None Include="Resources\Shaders\CubicCurveShaders\GPUDividedCubicCurve.shader" />
+    <None Include="Resources\Shaders\CubicSpline2D.shader" />
+    <None Include="Resources\Shaders\Disk.shader" />
+    <None Include="Resources\Shaders\SimpleTextureTest.shader" />
+    <None Include="Resources\Shaders\TessellationTests\IsolineTessellation.shader" />
+    <None Include="Resources\Shaders\TessellationTests\QuadTessellation.shader" />
+    <None Include="Resources\Shaders\TessellationTests\TriangleTessellation.shader" />
+    <None Include="Resources\Shaders\Test.shader" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Common.h" />
+    <ClInclude Include="Source\Delegate.h" />
+    <ClInclude Include="Source\Tests\BasicTests\ClearColorTest.h" />
+    <ClInclude Include="Source\Tests\BasicTests\CompleteMessTest.h" />
+    <ClInclude Include="Source\Tests\BasicTests\Curve3DTest.h" />
+    <ClInclude Include="Source\Tests\BasicTests\DisksTest.h" />
+    <ClInclude Include="Source\Tests\BasicTests\TessellationTest.h" />
+    <ClInclude Include="Source\Tests\BasicTests\TexturesTest.h" />
+    <ClInclude Include="Source\Tests\GraphsTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\CubicCurveTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\CubicSplinesTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\HighOrderBezierTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\HighOrderSplinesTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\PolynomialInterpolationTest.h" />
+    <ClInclude Include="Source\Tests\PolynomialTests\ShaderCubicCurveTest.h" />
+    <ClInclude Include="Source\Tests\Test.h" />
+    <ClInclude Include="Source\Tests\TestSelector.h" />
+    <ClInclude Include="Source\Tests\Utilities\ControlPointsEditor.h" />
+    <ClInclude Include="Source\Tools\Events\Event.h" />
+    <ClInclude Include="Source\Tools\Events\InputEvents.h" />
+    <ClInclude Include="Source\Tools\Events\KeyCode.h" />
+    <ClInclude Include="Source\Tools\Events\MouseButton.h" />
+    <ClInclude Include="Source\Tools\Events\WindowEvents.h" />
+    <ClInclude Include="Source\Tools\Graphics\Buffer.h" />
+    <ClInclude Include="Source\Tools\Graphics\BufferLayout.h" />
+    <ClInclude Include="Source\Tools\Graphics\Curve.h" />
+    <ClInclude Include="Source\Tools\Graphics\Point.h" />
+    <ClInclude Include="Source\Tools\Graphics\Shader.h" />
+    <ClInclude Include="Source\Tools\Graphics\ShaderDataType.h" />
+    <ClInclude Include="Source\Tools\Graphics\Texture.h" />
+    <ClInclude Include="Source\Tools\Graphics\VertexArray.h" />
+    <ClInclude Include="Source\Tools\GuiUtil.h" />
+    <ClInclude Include="Source\Tools\Input.h" />
+    <ClInclude Include="Source\Tools\Math\Angle.h" />
+    <ClInclude Include="Source\Tools\Math\Color.h" />
+    <ClInclude Include="Source\Tools\Math\Math.h" />
+    <ClInclude Include="Source\Tools\Math\Matrix4x4.h" />
+    <ClInclude Include="Source\Tools\Math\QuadraticCurve.h" />
+    <ClInclude Include="Source\Tools\Math\TimeSpan.h" />
+    <ClInclude Include="Source\Tools\Math\Vector.h" />
+    <ClInclude Include="Source\Tools\Renderer.h" />
+    <ClInclude Include="Source\Tools\SpecificRenderers\GraphsRenderer.h" />
+    <ClInclude Include="Source\Tools\SpecificRenderers\PointsBuffer.h" />
+    <ClInclude Include="Source\Tools\Window.h" />
+    <ClInclude Include="Vendor\ImGUI\imconfig.h" />
+    <ClInclude Include="Vendor\ImGUI\imgui.h" />
+    <ClInclude Include="Vendor\ImGUI\imgui_impl_glfw.h" />
+    <ClInclude Include="Vendor\ImGUI\imgui_impl_opengl3.h" />
+    <ClInclude Include="Vendor\ImGUI\imgui_internal.h" />
+    <ClInclude Include="Vendor\ImGUI\imstb_rectpack.h" />
+    <ClInclude Include="Vendor\ImGUI\imstb_textedit.h" />
+    <ClInclude Include="Vendor\ImGUI\imstb_truetype.h" />
+    <ClInclude Include="Vendor\STBImage\stb_image.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Resources\Textures\Crate.png" />
+    <Image Include="Resources\Textures\Pixel Test.png" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
